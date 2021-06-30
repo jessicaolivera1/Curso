@@ -1,25 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Open Browser "OrangeHRM" web page]]>
+    </line>
+    <line>
+      <![CDATA[Enter Username and Password]]>
+    </line>
+    <line>
+      <![CDATA[Step 3 Validate that you have logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Click Admin - Go to the admin page]]>
+    </line>
+    <line>
+      <![CDATA[ Click Add]]>
+    </line>
+    <line>
+      <![CDATA[ Enter valid Employee Name]]>
+    </line>
+    <line>
+      <![CDATA[ Enter valid username]]>
+    </line>
+    <line>
+      <![CDATA[ Enter new password and confirm]]>
+    </line>
+    <line>
+      <![CDATA[ Click Save]]>
+    </line>
+    <line>
+      <![CDATA[Search username in field "Username]]>
+    </line>
+    <line>
+      <![CDATA[Click Searche]]>
+    </line>
+    <line>
+      <![CDATA[Verify username exist in table]]>
+    </line>
+    <line>
+      <![CDATA[log out ]]>
+    </line>
+    <line>
+      <![CDATA[Close Browser ]]>
+    </line>
   </reporter-output>
-  <suite started-at="2021-06-05T13:57:35Z" name="Default suite" finished-at="2021-06-05T13:58:01Z" duration-ms="26699">
+  <suite started-at="2021-06-30T22:41:45Z" name="Default suite" finished-at="2021-06-30T22:42:09Z" duration-ms="24076">
     <groups>
     </groups>
-    <test started-at="2021-06-05T13:57:35Z" name="Default test" finished-at="2021-06-05T13:58:01Z" duration-ms="26699">
-      <class name="com.google.GoogleTest">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.google.GoogleTest@19e7a160]" started-at="2021-06-05T13:57:35Z" name="beforeTest" finished-at="2021-06-05T13:57:35Z" duration-ms="13" status="PASS">
+    <test started-at="2021-06-30T22:41:45Z" name="Default test" finished-at="2021-06-30T22:42:09Z" duration-ms="24076">
+      <class name="com.opensource.admin.qa.TC003_Admin_AddNewUser">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser@19e7a160]" started-at="2021-06-30T22:41:45Z" name="beforeTest" finished-at="2021-06-30T22:41:45Z" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f()[pri:0, instance:com.google.GoogleTest@19e7a160]" started-at="2021-06-05T13:57:35Z" name="f" finished-at="2021-06-05T13:58:01Z" duration-ms="26644" status="PASS">
+        <test-method signature="TC003_Admin_AddNewUser_Script()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser@19e7a160]" started-at="2021-06-30T22:41:45Z" name="TC003_Admin_AddNewUser_Script" finished-at="2021-06-30T22:42:09Z" duration-ms="24024" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Open Browser "OrangeHRM" web page]]>
+            </line>
+            <line>
+              <![CDATA[Enter Username and Password]]>
+            </line>
+            <line>
+              <![CDATA[Step 3 Validate that you have logged in successfully]]>
+            </line>
+            <line>
+              <![CDATA[Click Admin - Go to the admin page]]>
+            </line>
+            <line>
+              <![CDATA[ Click Add]]>
+            </line>
+            <line>
+              <![CDATA[ Enter valid Employee Name]]>
+            </line>
+            <line>
+              <![CDATA[ Enter valid username]]>
+            </line>
+            <line>
+              <![CDATA[ Enter new password and confirm]]>
+            </line>
+            <line>
+              <![CDATA[ Click Save]]>
+            </line>
+            <line>
+              <![CDATA[Search username in field "Username]]>
+            </line>
+            <line>
+              <![CDATA[Click Searche]]>
+            </line>
+            <line>
+              <![CDATA[Verify username exist in table]]>
+            </line>
+            <line>
+              <![CDATA[log out ]]>
+            </line>
+            <line>
+              <![CDATA[Close Browser ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- TC003_Admin_AddNewUser_Script -->
+        <test-method signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser@19e7a160]" started-at="2021-06-30T22:42:09Z" name="beforeTest" finished-at="2021-06-30T22:42:09Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.google.GoogleTest@19e7a160]" started-at="2021-06-05T13:58:01Z" name="afterTest" finished-at="2021-06-05T13:58:01Z" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC003_Admin_AddNewUser@19e7a160]" started-at="2021-06-30T22:42:09Z" name="afterTest" finished-at="2021-06-30T22:42:09Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.google.GoogleTest -->
+      </class> <!-- com.opensource.admin.qa.TC003_Admin_AddNewUser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
