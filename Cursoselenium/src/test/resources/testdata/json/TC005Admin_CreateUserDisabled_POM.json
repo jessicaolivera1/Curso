@@ -1,0 +1,16 @@
+{
+  "TC005Admin_CreateUserDisabled_POM": {
+	  "username":"Admin",
+	  "password":"admin123",
+	  "employeeName":"Aaliyah Haq",
+	  "newUser":"jessica",
+	  "passwordNewUser":"12345678",
+	  "dropStatus":"Disabled"
+	 
+	  
+	  
+	  
+	 
+  }
+  
+}

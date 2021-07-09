@@ -5,7 +5,6 @@
     <classes>
       <class name="com.opensource.admin.qa.TC004Admin_DeleteUser_POM">
         <methods>
-          <include name="TC004Admin_DeleteUser_POM_Script"/>
           <include name="beforeTest"/>
           <include name="TC003Admin_AddNewUser_POM_Script"/>
           <include name="afterTest"/>

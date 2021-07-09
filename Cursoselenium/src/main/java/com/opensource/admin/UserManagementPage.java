@@ -2,6 +2,7 @@ package com.opensource.admin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.opensource.base.SeleniumWrapper;
 
@@ -24,6 +25,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	By hdrAddUser= By.xpath("//h1 [@id='UserHeading']");
 	By txtEmployeeName=By.xpath("//input [@id='systemUser_employeeName_empName']");
 	By txtUserName=By.xpath("//input [@id='systemUser_userName']");
+	By dprStatus= By.xpath("//select [@id=\"systemUser_status\"]");
 	By txtPasswordNewUser =By.xpath("//input [@id='systemUser_password']");
 	By txtConfirmPassword=By.xpath("//input [@id='systemUser_confirmPassword']");
 	By btnSave=By.xpath("//input [@id='btnSave']");
@@ -70,6 +72,25 @@ public class UserManagementPage extends SeleniumWrapper {
 		type(infoData[2], txtPasswordNewUser);
 		type(infoData[2], txtConfirmPassword);
 		newuser=infoData[1];
+	}
+	
+	
+	public void addNewUserDataDisabled (String infoData[]) {
+		type(infoData[0], txtEmployeeName);
+		type(infoData[1], txtUserName);	
+		changeStatus(dprStatus,infoData[2]);
+		type(infoData[3], txtPasswordNewUser);
+		type(infoData[3], txtConfirmPassword);
+		newuser=infoData[1];
+	}
+
+	/**
+	 * Disabled
+	 * @author VI1XXVQ
+	 */
+	public void changeStatus(By locator,String status) {
+		changeDrop(locator,status);
+		
 	}
 
 	/**
