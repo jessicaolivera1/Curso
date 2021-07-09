@@ -57,7 +57,8 @@ public class SeleniumWrapper {
 	 */
 
 	public WebDriver chromeDriverConnection() {
-		System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH );
+		//System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH );
+		System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH_LINUX );
 		driver = new ChromeDriver();
 		return  driver;
 
@@ -196,13 +197,13 @@ public class SeleniumWrapper {
 			Assert.fail("No able to close Browser");
 		}
 	}
-	
-	
+
+
 	/*
-	* Get Value from Excel
-	* @author Ricardo Avalos
-	* @date 02/18/2019
-	*/
+	 * Get Value from Excel
+	 * @author Ricardo Avalos
+	 * @date 02/18/2019
+	 */
 	public String getCellData(String excelName, int row, int column) {
 		try {
 			// Reading Data
@@ -223,15 +224,15 @@ public class SeleniumWrapper {
 			return null;
 		}
 	}
-	
+
 	/**
-	* Get Data from JSON file (1 Node)
-	*
-	* @author Ricardo Avalos
-	* @param jsonFile, jsonObjName, jsonKey
-	* @return jsonValue
-	* @throws FileNotFoundException
-	*/
+	 * Get Data from JSON file (1 Node)
+	 *
+	 * @author Ricardo Avalos
+	 * @param jsonFile, jsonObjName, jsonKey
+	 * @return jsonValue
+	 * @throws FileNotFoundException
+	 */
 	public String getJSONValue(String jsonFile, String jsonObjName, String jsonKey)  {
 		try {
 
@@ -248,16 +249,16 @@ public class SeleniumWrapper {
 			return null;
 		}
 	}
-	
-	
+
+
 	/**
-	* Get Data from JSON file (Directly)
-	*
-	* @author Ricardo Avalos
-	* @param jsonFile, jsonKey
-	* @return jsonValue
-	* @throws FileNotFoundException
-	*/
+	 * Get Data from JSON file (Directly)
+	 *
+	 * @author Ricardo Avalos
+	 * @param jsonFile, jsonKey
+	 * @return jsonValue
+	 * @throws FileNotFoundException
+	 */
 	public String getJSONValue(String jsonFileObj, String jsonKey) {
 		try {
 
@@ -274,8 +275,8 @@ public class SeleniumWrapper {
 			return null;
 		}
 	}
-	
-	
-	
+
+
+
 }
 

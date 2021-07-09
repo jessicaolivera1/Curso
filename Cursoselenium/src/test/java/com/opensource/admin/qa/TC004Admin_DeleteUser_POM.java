@@ -16,51 +16,44 @@ public class TC004Admin_DeleteUser_POM extends TC003Admin_AddNewUser_POM {
 	SeleniumWrapper seleniumWrapper;
 	LoginPage login;
 	UserManagementPage um;
-	String username, password;
-	String newuser;
-	
+	String username, password;	
+	String [] infoData  = new String [3];
 
 	@BeforeTest
 	public void beforeTest() {
-
 		seleniumWrapper= new SeleniumWrapper(driver);
 		driver=seleniumWrapper.chromeDriverConnection();
 		login=new LoginPage(driver);
 		um=new UserManagementPage(driver);
-		newuser= getNewUser();
-		System.out.println("fffff"+ newuser);
 
 		//SETUP DATA 
 		//JSON
 		this.username= seleniumWrapper.getJSONValue(this.getClass().getSimpleName(), "username");
 		this.password= seleniumWrapper.getJSONValue(this.getClass().getSimpleName(), "password");
-
-
-
+		
+		this.infoData[0]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "employeeName");
+		this.infoData[1]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "newUser")+ um.getRandomSubfix();
+		this.infoData[2]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "passwordNewUser");
 	}
+
+
 	@Test
 	public void TC004Admin_DeleteUser_POM_Script() {
 
 		//Step 1
-
 		login.setup(GlobalVariables.QA_URL);
 
 		//Step  2
-
 		login.loginOrange(username, password);
 
 		//Step 3
-
 		um.validateLoginSuccessfully();
 
 		// Step 4
-
 		um.clickAdmin();
 
 		//Step 5
-
-		um.searchUser(newuser, true);
-
+		um.searchUser(um.createNewUser(infoData), true);
 	}
 
 

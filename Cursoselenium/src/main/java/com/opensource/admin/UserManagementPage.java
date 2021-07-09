@@ -11,12 +11,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	// constructor 
 	public UserManagementPage(WebDriver driver) {
 		super(driver);
-
-
-
 	}
-
-
 
 	// objetos
 	By linkUM =By.xpath("//a[@id='menu_admin_viewAdminModule']");
@@ -34,27 +29,15 @@ public class UserManagementPage extends SeleniumWrapper {
 	By btnSave=By.xpath("//input [@id='btnSave']");
 
 
-
-
-
-
-
-
 	// metodos
 	/**
 	 * validate login success
 	 * @author VI1XXVQ
 	 */
-
 	public void validateLoginSuccessfully () {
 		reportLog("Validate that you have logged in successfully");
 		waitForElement(linkUM);	
 	}
-
-
-
-
-
 
 	/**
 	 * click admin
@@ -64,22 +47,16 @@ public class UserManagementPage extends SeleniumWrapper {
 		reportLog("Click Admin - Go to the admin page");
 		click(linkUM);
 		waitForElement(txtusername);
-
 	}
-
 
 	/**
 	 * Click Add
 	 * @author VI1XXVQ
 	 */
-
 	public void clickAdd () {
 		reportLog ("Click Add");
 		click(btnAdd);
 		waitForElement(hdrAddUser);
-
-
-
 	}
 
 	/**
@@ -87,7 +64,6 @@ public class UserManagementPage extends SeleniumWrapper {
 	 * @author VI1XXVQ
 	 * 
 	 */
-
 	public void addNewUserData (String infoData[]) {
 		type(infoData[0], txtEmployeeName);
 		type(infoData[1], txtUserName);	
@@ -100,36 +76,22 @@ public class UserManagementPage extends SeleniumWrapper {
 	 * clickSave
 	 * @author VI1XXVQ
 	 */
-
 	public void clickSave(){
 		reportLog (" Click Save");
 		click(btnSave);
 		implicitlyWait(2);
-
 	}
-
-
-	public String returnnewuser(){
-		return this.newuser;
-
-	}
-
-
-
 
 	/**
 	 * Search username 
 	 * @author VI1XXVQ
 	 */
-
 	public void searchUser(String username,boolean clickSearch) {
 		reportLog (" Search username in field \"Username\"");
 		type(username,txtSearchUser);
 		if(clickSearch) {
 			click(btnSearch);
 		}
-
-
 	}
 
 	/**
@@ -152,12 +114,40 @@ public class UserManagementPage extends SeleniumWrapper {
 		assertEquals(valueFound,expectedValue);
 	}
 
-
+	/**
+	 * validate if data exist in 
+	 * @author VI1XXVQ
+	 */
 	public void validateData (String expectedValue, int fila, int col) {
 		By tblForValue=By.xpath("//tbody/tr["+fila+"]/td ["+col+"]");
 		reportLog ("Verify username is not exist in table");	
 		String valueFound=getText(tblForValue);
 		assertEquals(valueFound,expectedValue);
+	}
+
+	/**
+	 * validate if data exist in 
+	 * @author VI1XXVQ
+	 */
+	public int getRandomSubfix() {
+		return (int)(Math.random()*100);
+	}
+	
+	public String createNewUser(String infoData[]) {
+		reportLog ("Click Add");
+		click(btnAdd);
+		waitForElement(hdrAddUser);
+		
+		type(infoData[0], txtEmployeeName);
+		type(infoData[1], txtUserName);	
+		type(infoData[2], txtPasswordNewUser);
+		type(infoData[2], txtConfirmPassword);
+		
+		reportLog (" Click Save");
+		click(btnSave);
+		implicitlyWait(2);
+		
+		return infoData[1];
 	}
 
 }
