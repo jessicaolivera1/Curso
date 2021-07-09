@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\VI1XXVQ\AppData\Local\Temp\testng-eclipse--249141594\testng-customsuite.xml</span>
+                    <span>C:\Users\VI1XXVQ\AppData\Local\Temp\testng-eclipse-663559894\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Default_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.opensource.admin.qa.TC003_Admin_AddNewUser" class="method navigator-link" hash-for-method="TC003_Admin_AddNewUser_Script">TC003_Admin_AddNewUser_Script</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.opensource.admin.qa.TC004Admin_DeleteUser_POM" class="method navigator-link" hash-for-method="TC003Admin_AddNewUser_POM_Script">TC003Admin_AddNewUser_POM_Script</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.opensource.admin.qa.TC003_Admin_AddNewUser" class="method navigator-link" hash-for-method="beforeTest">beforeTest</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.opensource.admin.qa.TC004Admin_DeleteUser_POM" class="method navigator-link" hash-for-method="TC004Admin_DeleteUser_POM_Script">TC004Admin_DeleteUser_POM_Script</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,32 +122,93 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.opensource.admin.qa.TC003_Admin_AddNewUser</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.opensource.admin.qa.TC004Admin_DeleteUser_POM</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC003_Admin_AddNewUser_Script">
-                  </a> <!-- TC003_Admin_AddNewUser_Script -->
-                  <span class="method-name">TC003_Admin_AddNewUser_Script</span>
+                  <a name="TC003Admin_AddNewUser_POM_Script">
+                  </a> <!-- TC003Admin_AddNewUser_POM_Script -->
+                  <span class="method-name">TC003Admin_AddNewUser_POM_Script</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.opensource.admin.qa.TC003Admin_AddNewUser_POM.TC003Admin_AddNewUser_POM_Script(TC003Admin_AddNewUser_POM.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="beforeTest">
-                  </a> <!-- beforeTest -->
-                  <span class="method-name">beforeTest</span>
+                  <a name="TC004Admin_DeleteUser_POM_Script">
+                  </a> <!-- TC004Admin_DeleteUser_POM_Script -->
+                  <span class="method-name">TC004Admin_DeleteUser_POM_Script</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
+	at com.opensource.base.SeleniumWrapper.type(SeleniumWrapper.java:121)
+	at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:127)
+	at com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script(TC004Admin_DeleteUser_POM.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
+          </div> <!-- suite-Default_suite-class-failed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\VI1XXVQ\AppData\Local\Temp\testng-eclipse--249141594\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\VI1XXVQ\AppData\Local\Temp\testng-eclipse-663559894\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -156,7 +217,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.opensource.admin.qa.TC003_Admin_AddNewUser&quot;/&gt;
+      &lt;class name=&quot;com.opensource.admin.qa.TC004Admin_DeleteUser_POM&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -198,18 +259,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC003_Admin_AddNewUser_Script')
-data.setCell(0, 2, 'com.opensource.admin.qa.TC003_Admin_AddNewUser')
-data.setCell(0, 3, 24024);
+data.setCell(0, 1, 'TC004Admin_DeleteUser_POM_Script')
+data.setCell(0, 2, 'com.opensource.admin.qa.TC004Admin_DeleteUser_POM')
+data.setCell(0, 3, 28751);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'beforeTest')
-data.setCell(1, 2, 'com.opensource.admin.qa.TC003_Admin_AddNewUser')
-data.setCell(1, 3, 1);
+data.setCell(1, 1, 'TC003Admin_AddNewUser_POM_Script')
+data.setCell(1, 2, 'com.opensource.admin.qa.TC004Admin_DeleteUser_POM')
+data.setCell(1, 3, 20);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -221,22 +282,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">TC003_Admin_AddNewUser_Script</span>
+              <span class="reporter-method-name">TC004Admin_DeleteUser_POM_Script</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Open Browser "OrangeHRM" web page</span>
-                <span class="reporter-method-output">Enter Username and Password</span>
-                <span class="reporter-method-output">Step 3 Validate that you have logged in successfully</span>
+                <span class="reporter-method-output">Launching... https://opensource-demo.orangehrmlive.com/ application</span>
+                <span class="reporter-method-output">Login OrangeHRM web page ....</span>
+                <span class="reporter-method-output">Validate that you have logged in successfully</span>
                 <span class="reporter-method-output">Click Admin - Go to the admin page</span>
-                <span class="reporter-method-output"> Click Add</span>
-                <span class="reporter-method-output"> Enter valid Employee Name</span>
-                <span class="reporter-method-output"> Enter valid username</span>
-                <span class="reporter-method-output"> Enter new password and confirm</span>
-                <span class="reporter-method-output"> Click Save</span>
-                <span class="reporter-method-output">Search username in field "Username</span>
-                <span class="reporter-method-output">Click Searche</span>
-                <span class="reporter-method-output">Verify username exist in table</span>
-                <span class="reporter-method-output">log out </span>
-                <span class="reporter-method-output">Close Browser </span>
+                <span class="reporter-method-output"> Search username in field "Username"</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -254,22 +306,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.opensource.admin.qa.TC003_Admin_AddNewUser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.opensource.admin.qa.TC004Admin_DeleteUser_POM</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">TC003_Admin_AddNewUser_Script</span>
-                <span class="method-start">39 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC003Admin_AddNewUser_POM_Script</span>
+                <span class="method-start">3043 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">24067 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC004Admin_DeleteUser_POM_Script</span>
+                <span class="method-start">3087 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">24071 ms</span>
+                <span class="method-start">31842 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

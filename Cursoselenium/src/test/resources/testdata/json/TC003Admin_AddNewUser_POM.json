@@ -1,0 +1,14 @@
+{
+  "TC003Admin_AddNewUser_POM": {
+	  "username":"Admin",
+	  "password":"admin123",
+	  "employeeName":"Aaliyah Haq",
+	  "newUser":"jessica",
+	  "passwordNewUser":"12345678"
+	  
+	  
+	  
+	 
+  }
+  
+}

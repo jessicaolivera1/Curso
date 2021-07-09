@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.opensource.admin.qa.NewTest">
+      <class name="com.opensource.admin.qa.TC004Admin_DeleteUser_POM">
         <methods>
-          <include name="TC004_Admin_DeleteUse_Script"/>
-          <include name="afterTest"/>
+          <include name="TC004Admin_DeleteUser_POM_Script"/>
           <include name="beforeTest"/>
+          <include name="TC003Admin_AddNewUser_POM_Script"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- com.opensource.admin.qa.NewTest -->
+      </class> <!-- com.opensource.admin.qa.TC004Admin_DeleteUser_POM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

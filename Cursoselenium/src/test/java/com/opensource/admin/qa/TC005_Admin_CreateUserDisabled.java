@@ -13,7 +13,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.Select;
 
-public class TC005_Admin_CreateUserDisabled {
+public class TC005_Admin_CreateUserDisabled  {
 	@Test
 	public void  TC005_Admin_CreateUserDisabled_Script() {
 

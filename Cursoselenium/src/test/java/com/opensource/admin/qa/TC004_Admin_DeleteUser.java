@@ -14,13 +14,15 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 
-public class TC004_Admin_DeleteUser {
+public class TC004_Admin_DeleteUser extends TC003_Admin_AddNewUser {
 
-	WebDriver driver ;
+	WebDriver driver;
+	
 	@BeforeTest
 	public void beforeTest() {
 	}
-
+		
+	
 
 
 	@Test
@@ -30,7 +32,7 @@ public class TC004_Admin_DeleteUser {
 
 		String username= "Admin";
 		String Password= "admin123";
-		String newuser="Mario1";
+		//String newuser="Mario22";
 		String notFound="No Records Found";
 
 
@@ -66,7 +68,7 @@ public class TC004_Admin_DeleteUser {
 
 		//Step 5 Search username in field "Username"
 		Reporter.log("Search username in field \"Usernamee");  
-		driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys(newuser);
+		driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys(returnuser());
 
 
 		// Step 6 Click Search
@@ -77,7 +79,7 @@ public class TC004_Admin_DeleteUser {
 		// Step 7 Verify username exist in table
 		Reporter.log ("Verify username exist in table");
 		String getusername=driver.findElement(By.xpath("//tbody/tr[1]/td [2]")).getText ();
-		Assert.assertEquals(getusername, newuser);
+		Assert.assertEquals(getusername, returnuser());
 
 
 		//Step 8 Select User
@@ -101,7 +103,7 @@ public class TC004_Admin_DeleteUser {
 		Reporter.log ("Validate in table that user was delete successfully");
 
 
-		driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys(newuser);
+		driver.findElement(By.xpath("//input[@id='searchSystemUser_userName']")).sendKeys(returnuser());
 
 		driver.findElement(By.xpath("//input[@id= 'searchBtn']")).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
