@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 
-public class TC004Admin_DeleteUser_POM extends TC003Admin_AddNewUser_POM {
+public class TC004Admin_DeleteUser_POM {
 	WebDriver driver ;
 	SeleniumWrapper seleniumWrapper;
 	LoginPage login;
@@ -54,11 +54,25 @@ public class TC004Admin_DeleteUser_POM extends TC003Admin_AddNewUser_POM {
 
 		//Step 5
 		um.searchUser(um.createNewUser(infoData), true);
+		
+		
+		// Step 7
+		
+		um.selectUser(1, 1);
+		
+		um.deleteUser();
+		
+		
+		um.confirmdelte();
+		
+		um.validateData(this.infoData[1], 1, 2);
 	}
 
 
 	@AfterTest
 	public void afterTest() {
+		
+		login.closeBrowser();
 	}
 
 }

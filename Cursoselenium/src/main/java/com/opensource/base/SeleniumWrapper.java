@@ -58,8 +58,8 @@ public class SeleniumWrapper {
 	 */
 
 	public WebDriver chromeDriverConnection() {
-		//System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH );
-		System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH_LINUX );
+	System.setProperty(GlobalVariables.CHROME_DRIVER_NAME,GlobalVariables.CHROME_DRIVER_PATH );
+		
 		driver = new ChromeDriver();
 		return  driver;
 

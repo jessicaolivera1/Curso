@@ -1,7 +1,10 @@
 {
   "TC004Admin_DeleteUser_POM": {
 	  "username":"Admin",
-	  "password":"admin123"
+	  "password":"admin123",
+	   "employeeName":"Aaliyah Haq",
+	  "newUser":"jessica",
+	  "passwordNewUser":"12345678"
 	 
 	  
 	  

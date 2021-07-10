@@ -24,11 +24,14 @@ public class UserManagementPage extends SeleniumWrapper {
 	By btnAdd=By.xpath("//input [@id='btnAdd']");
 	By hdrAddUser= By.xpath("//h1 [@id='UserHeading']");
 	By txtEmployeeName=By.xpath("//input [@id='systemUser_employeeName_empName']");
-	By txtUserName=By.xpath("//input [@id='systemUser_userName']");
+	By txtUserNameAdd=By.xpath("//input [@id='systemUser_userName']");
 	By dprStatus= By.xpath("//select [@id=\"systemUser_status\"]");
 	By txtPasswordNewUser =By.xpath("//input [@id='systemUser_password']");
 	By txtConfirmPassword=By.xpath("//input [@id='systemUser_confirmPassword']");
 	By btnSave=By.xpath("//input [@id='btnSave']");
+	By btnDelete=By.xpath("//input[@id='btnDelete']");
+	By btnConfirmDelete=By.xpath("//input [@id='dialogDeleteBtn']");
+	
 
 
 	// metodos
@@ -68,16 +71,24 @@ public class UserManagementPage extends SeleniumWrapper {
 	 */
 	public void addNewUserData (String infoData[]) {
 		type(infoData[0], txtEmployeeName);
-		type(infoData[1], txtUserName);	
+		type(infoData[1], txtUserNameAdd);	
 		type(infoData[2], txtPasswordNewUser);
 		type(infoData[2], txtConfirmPassword);
 		newuser=infoData[1];
+		implicitlyWait(2);
 	}
 	
 	
+	/**
+	 * @author VI1XXVQ
+	 * addNewUserDataDisabled
+	 * @param infoData
+	 */
+	
 	public void addNewUserDataDisabled (String infoData[]) {
+		reportLog (" addNewUserDataDisabled ");
 		type(infoData[0], txtEmployeeName);
-		type(infoData[1], txtUserName);	
+		type(infoData[1], txtUserNameAdd);	
 		changeStatus(dprStatus,infoData[2]);
 		type(infoData[3], txtPasswordNewUser);
 		type(infoData[3], txtConfirmPassword);
@@ -85,7 +96,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	}
 
 	/**
-	 * Disabled
+	 * changeStatus
 	 * @author VI1XXVQ
 	 */
 	public void changeStatus(By locator,String status) {
@@ -103,6 +114,10 @@ public class UserManagementPage extends SeleniumWrapper {
 		implicitlyWait(2);
 	}
 
+	
+	
+	
+	
 	/**
 	 * Search username 
 	 * @author VI1XXVQ
@@ -141,7 +156,8 @@ public class UserManagementPage extends SeleniumWrapper {
 	 */
 	public void validateData (String expectedValue, int fila, int col) {
 		By tblForValue=By.xpath("//tbody/tr["+fila+"]/td ["+col+"]");
-		reportLog ("Verify username is not exist in table");	
+		reportLog ("Verify username is not exist in table");
+		implicitlyWait(2);
 		String valueFound=getText(tblForValue);
 		assertEquals(valueFound,expectedValue);
 	}
@@ -154,22 +170,53 @@ public class UserManagementPage extends SeleniumWrapper {
 		return (int)(Math.random()*100);
 	}
 	
+	/**
+	 * 
+	 * createNewUser
+	 * @author VI1XXVQ
+	 * @param infoData
+	 * @return
+	 */
+	
 	public String createNewUser(String infoData[]) {
 		reportLog ("Click Add");
 		click(btnAdd);
 		waitForElement(hdrAddUser);
 		
 		type(infoData[0], txtEmployeeName);
-		type(infoData[1], txtUserName);	
+		type(infoData[1], txtUserNameAdd);	
 		type(infoData[2], txtPasswordNewUser);
 		type(infoData[2], txtConfirmPassword);
 		
 		reportLog (" Click Save");
+		implicitlyWait(3);
 		click(btnSave);
 		implicitlyWait(2);
 		
 		return infoData[1];
 	}
+	
+	public void selectUser (int fila, int col) {
+		By tblForValue=By.xpath("//tbody/tr["+fila+"]/td ["+col+"]");
+		reportLog ("selecUser");
+		click(tblForValue);
+		
+	}
+	
+	public void deleteUser(){
+		reportLog (" Delete User");
+		click(btnDelete);
+		implicitlyWait(2);
+		
+	}
+	
+	
+	public void confirmdelte () {
+		click(btnConfirmDelete);
+		implicitlyWait(2);
+	}
+	
+
 
 }
 
