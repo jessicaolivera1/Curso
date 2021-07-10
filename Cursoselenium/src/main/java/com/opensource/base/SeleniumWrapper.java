@@ -1,11 +1,14 @@
 package com.opensource.base;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -26,6 +29,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
 
 /**
  * Selenium Wrapper class- Base class
@@ -131,6 +137,7 @@ public class SeleniumWrapper {
 	public void click (By locator) {
 		waitForElementClickable(locator);
 		driver.findElement(locator).click();
+		takeScreenshot("clickObject"+getRandomSubfix());
 	}
 	
 	
@@ -297,6 +304,29 @@ public class SeleniumWrapper {
 			Assert.fail("JSON file is not found");
 			return null;
 		}
+	}
+	
+	/*
+	* Take screenshot
+	*
+	*
+	* @throws IOException
+	*/
+	public String takeScreenshot(String fileName){
+	try {
+	String pathFileName= GlobalVariables.PATH_SCREENSHOTS + fileName + ".png";
+	Screenshot screenshot = new AShot().takeScreenshot(driver);
+	ImageIO.write(screenshot.getImage(), "PNG", new File(pathFileName));
+	return pathFileName;
+	} catch (Exception e) {
+	System.out.println(e.getMessage());
+	return null;
+	}
+
+	 }
+	
+	public int getRandomSubfix() {
+		return (int)(Math.random()*100);
 	}
 
 

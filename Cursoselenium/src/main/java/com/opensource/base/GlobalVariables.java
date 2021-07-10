@@ -9,5 +9,5 @@ public class GlobalVariables {
 	public static final String PATH_JSON_DATA = "./src/test/resources/testdata/json/";
 	public static final String PATH_EXCEL_DATA = "./src/test/resources/testdata/excel/";
 	public static final String TC003_NAME = "TC003Admin_AddNewUser_POM";
-
+	public static final String PATH_SCREENSHOTS = System.getProperty("user.dir")+"/test-output/screenshots/";
 }

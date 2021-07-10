@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Launching... https://opensource-demo.orangehrmlive.com/ application]]>
@@ -14,95 +14,28 @@
       <![CDATA[Click Admin - Go to the admin page]]>
     </line>
     <line>
-      <![CDATA[Click Add]]>
-    </line>
-    <line>
-      <![CDATA[ Click Save]]>
-    </line>
-    <line>
       <![CDATA[ Search username in field "Username"]]>
+    </line>
+    <line>
+      <![CDATA[Verify username is not exist in table]]>
+    </line>
+    <line>
+      <![CDATA[Logout OrangeHRM web page...]]>
     </line>
     <line>
       <![CDATA[Closing Browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-07-10T02:23:02Z" name="Default suite" finished-at="2021-07-10T02:23:19Z" duration-ms="16877">
+  <suite started-at="2021-07-10T14:21:23Z" name="Default suite" finished-at="2021-07-10T14:21:57Z" duration-ms="33492">
     <groups>
     </groups>
-    <test started-at="2021-07-10T02:23:02Z" name="Default test" finished-at="2021-07-10T02:23:19Z" duration-ms="16877">
-      <class name="com.opensource.admin.qa.TC004Admin_DeleteUser_POM">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:02Z" name="beforeTest" finished-at="2021-07-10T02:23:04Z" duration-ms="2425" status="PASS">
+    <test started-at="2021-07-10T14:21:23Z" name="Default test" finished-at="2021-07-10T14:21:57Z" duration-ms="33492">
+      <class name="com.opensource.admin.qa.TC001_AdminSearchEmployee_POM">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC001_AdminSearchEmployee_POM@27d5a580]" started-at="2021-07-10T14:21:23Z" name="beforeTest" finished-at="2021-07-10T14:21:27Z" duration-ms="3387" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TC004Admin_DeleteUser_POM_Script()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:05Z" name="TC004Admin_DeleteUser_POM_Script" finished-at="2021-07-10T02:23:19Z" duration-ms="14168" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='searchSystemUser_userName']"}
-  (Session info: chrome=91.0.4472.124)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VI1XXVQ01ELMXCO', ip: '10.55.233.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 49621a53096213c9cb2e9a1c5ece810b
-*** Element info: {Using=xpath, value=//input[@id='searchSystemUser_userName']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='searchSystemUser_userName']"}
-  (Session info: chrome=91.0.4472.124)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'VI1XXVQ01ELMXCO', ip: '10.55.233.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 49621a53096213c9cb2e9a1c5ece810b
-*** Element info: {Using=xpath, value=//input[@id='searchSystemUser_userName']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.opensource.base.SeleniumWrapper.type(SeleniumWrapper.java:123)
-at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:128)
-at com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script(TC004Admin_DeleteUser_POM.java:58)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="TC001_AdminSearchEmployee_POM_Script()[pri:0, instance:com.opensource.admin.qa.TC001_AdminSearchEmployee_POM@27d5a580]" started-at="2021-07-10T14:21:27Z" name="TC001_AdminSearchEmployee_POM_Script" finished-at="2021-07-10T14:21:56Z" duration-ms="29813" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Launching... https://opensource-demo.orangehrmlive.com/ application]]>
@@ -117,24 +50,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[Click Admin - Go to the admin page]]>
             </line>
             <line>
-              <![CDATA[Click Add]]>
-            </line>
-            <line>
-              <![CDATA[ Click Save]]>
-            </line>
-            <line>
               <![CDATA[ Search username in field "Username"]]>
             </line>
+            <line>
+              <![CDATA[Verify username is not exist in table]]>
+            </line>
+            <line>
+              <![CDATA[Logout OrangeHRM web page...]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- TC004Admin_DeleteUser_POM_Script -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:19Z" name="afterTest" finished-at="2021-07-10T02:23:19Z" duration-ms="253" status="PASS">
+        </test-method> <!-- TC001_AdminSearchEmployee_POM_Script -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC001_AdminSearchEmployee_POM@27d5a580]" started-at="2021-07-10T14:21:56Z" name="afterTest" finished-at="2021-07-10T14:21:57Z" duration-ms="258" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Closing Browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.opensource.admin.qa.TC004Admin_DeleteUser_POM -->
+      </class> <!-- com.opensource.admin.qa.TC001_AdminSearchEmployee_POM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
