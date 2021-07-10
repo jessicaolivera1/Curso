@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 08 22:46:06 CDT 2021</td>
+<td>Started on:</td><td>Fri Jul 09 21:23:02 CDT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28503 ms)</td>
+<tr><td>Total time:</td><td>16 seconds (16877 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,46 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC003Admin_AddNewUser_POM_Script()'><b>TC003Admin_AddNewUser_POM_Script</b><br>Test class: com.opensource.admin.qa.TC004Admin_DeleteUser_POM</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.opensource.admin.qa.TC003Admin_AddNewUser_POM.TC003Admin_AddNewUser_POM_Script(TC003Admin_AddNewUser_POM.java:44)
+<td title='com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script()'><b>TC004Admin_DeleteUser_POM_Script</b><br>Test class: com.opensource.admin.qa.TC004Admin_DeleteUser_POM<br/>
+<a href="#Output-1622694817" onClick='toggleBox("Output-1622694817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1622694817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1622694817">
+Launching... https://opensource-demo.orangehrmlive.com/ application<br/>
+Login OrangeHRM web page ....<br/>
+Validate that you have logged in successfully<br/>
+Click Admin - Go to the admin page<br/>
+Click Add<br/>
+ Click Save<br/>
+ Search username in field "Username"<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;searchSystemUser_userName&apos;]&quot;}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;VI1XXVQ01ELMXCO&apos;, ip: &apos;10.55.233.218&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49621a53096213c9cb2e9a1c5ece810b
+*** Element info: {Using=xpath, value=//input[@id=&apos;searchSystemUser_userName&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.opensource.base.SeleniumWrapper.type(SeleniumWrapper.java:123)
+	at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:128)
+	at com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script(TC004Admin_DeleteUser_POM.java:58)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -103,9 +140,33 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace295640874", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace295640874'><pre>java.lang.NullPointerException
-	at com.opensource.admin.qa.TC003Admin_AddNewUser_POM.TC003Admin_AddNewUser_POM_Script(TC003Admin_AddNewUser_POM.java:44)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1622694817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1622694817'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;searchSystemUser_userName&apos;]&quot;}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;VI1XXVQ01ELMXCO&apos;, ip: &apos;10.55.233.218&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49621a53096213c9cb2e9a1c5ece810b
+*** Element info: {Using=xpath, value=//input[@id=&apos;searchSystemUser_userName&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.opensource.base.SeleniumWrapper.type(SeleniumWrapper.java:123)
+	at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:128)
+	at com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script(TC004Admin_DeleteUser_POM.java:58)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,34 +193,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.opensource.admin.qa.TC004Admin_DeleteUser_POM@121314f7</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script()'><b>TC004Admin_DeleteUser_POM_Script</b><br>Test class: com.opensource.admin.qa.TC004Admin_DeleteUser_POM<br/>
-<a href="#Output-96039159" onClick='toggleBox("Output-96039159", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-96039159" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-96039159">
-Launching... https://opensource-demo.orangehrmlive.com/ application<br/>
-Login OrangeHRM web page ....<br/>
-Validate that you have logged in successfully<br/>
-Click Admin - Go to the admin page<br/>
-Click Add<br/>
- Click Save<br/>
- Search username in field "Username"<br/>
-</div>
-</td>
-<td></td>
-<td>16</td>
-<td>com.opensource.admin.qa.TC004Admin_DeleteUser_POM@121314f7</td></tr>
+<td>14</td>
+<td>com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580</td></tr>
 </table><p>
 </body>
 </html>

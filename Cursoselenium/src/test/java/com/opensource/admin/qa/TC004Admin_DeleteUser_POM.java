@@ -17,7 +17,9 @@ public class TC004Admin_DeleteUser_POM {
 	LoginPage login;
 	UserManagementPage um;
 	String username, password;	
+	String noResult;
 	String [] infoData  = new String [3];
+	
 
 	@BeforeTest
 	public void beforeTest() {
@@ -34,9 +36,9 @@ public class TC004Admin_DeleteUser_POM {
 		this.infoData[0]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "employeeName");
 		this.infoData[1]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "newUser")+ um.getRandomSubfix();
 		this.infoData[2]= seleniumWrapper.getJSONValue(GlobalVariables.TC003_NAME, "passwordNewUser");
+		this.noResult=seleniumWrapper.getJSONValue(this.getClass().getSimpleName(), "noResult");
+
 	}
-
-
 	@Test
 	public void TC004Admin_DeleteUser_POM_Script() {
 
@@ -52,25 +54,41 @@ public class TC004Admin_DeleteUser_POM {
 		// Step 4
 		um.clickAdmin();
 
-		//Step 5
+		//Step 5 ,6,7  create user and search user
 		um.searchUser(um.createNewUser(infoData), true);
+		um.validateData(this.infoData[1], 1, 2);
 		
-		
-		// Step 7
+		// Step 8
 		
 		um.selectUser(1, 1);
 		
+		// Step 9
+		
 		um.deleteUser();
 		
+		// Step 10
 		
-		um.confirmdelte();
+		um.validatePopwindow();
 		
-		um.validateData(this.infoData[1], 1, 2);
+		//Step 11
+		um.confirmdelete();
+		
+		// Step 12
+		
+		 um.searchUser(this.infoData[1], true);
+		
+		um.validateData(noResult, 1, 1);
+		
+		// Step 13
+		
+		 login.logoutOrange();
 	}
 
 
 	@AfterTest
 	public void afterTest() {
+		
+		//Step 14
 		
 		login.closeBrowser();
 	}

@@ -31,7 +31,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	By btnSave=By.xpath("//input [@id='btnSave']");
 	By btnDelete=By.xpath("//input[@id='btnDelete']");
 	By btnConfirmDelete=By.xpath("//input [@id='dialogDeleteBtn']");
-	
+	By wnddelete=By.xpath("//div[@id='deleteConfModal']");
 
 
 	// metodos
@@ -62,6 +62,7 @@ public class UserManagementPage extends SeleniumWrapper {
 		reportLog ("Click Add");
 		click(btnAdd);
 		waitForElement(hdrAddUser);
+		implicitlyWait(2);
 	}
 
 	/**
@@ -70,12 +71,13 @@ public class UserManagementPage extends SeleniumWrapper {
 	 * 
 	 */
 	public void addNewUserData (String infoData[]) {
+		reportLog (" addNewUserData");
 		type(infoData[0], txtEmployeeName);
 		type(infoData[1], txtUserNameAdd);	
 		type(infoData[2], txtPasswordNewUser);
 		type(infoData[2], txtConfirmPassword);
 		newuser=infoData[1];
-		implicitlyWait(2);
+		implicitlyWait(5);
 	}
 	
 	
@@ -100,6 +102,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	 * @author VI1XXVQ
 	 */
 	public void changeStatus(By locator,String status) {
+		reportLog (" changeStatus");
 		changeDrop(locator,status);
 		
 	}
@@ -152,6 +155,7 @@ public class UserManagementPage extends SeleniumWrapper {
 
 	/**
 	 * validate if data exist in 
+	 * Dinamic table
 	 * @author VI1XXVQ
 	 */
 	public void validateData (String expectedValue, int fila, int col) {
@@ -163,7 +167,7 @@ public class UserManagementPage extends SeleniumWrapper {
 	}
 
 	/**
-	 * validate if data exist in 
+	 * Generate Random number
 	 * @author VI1XXVQ
 	 */
 	public int getRandomSubfix() {
@@ -179,10 +183,9 @@ public class UserManagementPage extends SeleniumWrapper {
 	 */
 	
 	public String createNewUser(String infoData[]) {
-		reportLog ("Click Add");
+		reportLog ("createNewUser ");
 		click(btnAdd);
 		waitForElement(hdrAddUser);
-		
 		type(infoData[0], txtEmployeeName);
 		type(infoData[1], txtUserNameAdd);	
 		type(infoData[2], txtPasswordNewUser);
@@ -196,12 +199,22 @@ public class UserManagementPage extends SeleniumWrapper {
 		return infoData[1];
 	}
 	
+	/**
+	 * selectUser
+	 * @author VI1XXVQ
+	 */
+	
 	public void selectUser (int fila, int col) {
 		By tblForValue=By.xpath("//tbody/tr["+fila+"]/td ["+col+"]");
 		reportLog ("selecUser");
 		click(tblForValue);
 		
 	}
+	
+	/**
+	 * deleteUser
+	 * @author VI1XXVQ
+	 */
 	
 	public void deleteUser(){
 		reportLog (" Delete User");
@@ -210,13 +223,25 @@ public class UserManagementPage extends SeleniumWrapper {
 		
 	}
 	
-	
-	public void confirmdelte () {
+	/**
+	 * confirmdelete
+	 * @author VI1XXVQ
+	 */
+	public void confirmdelete () {
+		reportLog ("confirmdelete ");
 		click(btnConfirmDelete);
 		implicitlyWait(2);
 	}
 	
-
+	/**
+	 * validatePopwindow
+	 * @author VI1XXVQ
+	 */
+	
+	public void validatePopwindow() {
+		reportLog (" validatePopwindow Save");
+		waitForElement(wnddelete);
+	}
 
 }
 

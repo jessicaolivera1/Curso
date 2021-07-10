@@ -66,12 +66,16 @@ public class TC003Admin_AddNewUser_POM {
 
 		//Step 12
 		um.validateData(this.infoData[1], 1, 2);
+		
+		//Step 13
+		
+		 login.logoutOrange();
 	}
 
 
 	@AfterTest
 	public void afterTest() {
-		//Step 13
+		//Step 14
 		login.closeBrowser();
 	}
 }

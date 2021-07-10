@@ -26,16 +26,16 @@
       <![CDATA[Closing Browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-07-10T01:42:22Z" name="Default suite" finished-at="2021-07-10T01:42:38Z" duration-ms="16702">
+  <suite started-at="2021-07-10T02:23:02Z" name="Default suite" finished-at="2021-07-10T02:23:19Z" duration-ms="16877">
     <groups>
     </groups>
-    <test started-at="2021-07-10T01:42:22Z" name="Default test" finished-at="2021-07-10T01:42:38Z" duration-ms="16702">
-      <class name="com.opensource.admin.qa.TC003Admin_AddNewUser_POM">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC003Admin_AddNewUser_POM@27d5a580]" started-at="2021-07-10T01:42:22Z" name="beforeTest" finished-at="2021-07-10T01:42:24Z" duration-ms="2518" status="PASS">
+    <test started-at="2021-07-10T02:23:02Z" name="Default test" finished-at="2021-07-10T02:23:19Z" duration-ms="16877">
+      <class name="com.opensource.admin.qa.TC004Admin_DeleteUser_POM">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:02Z" name="beforeTest" finished-at="2021-07-10T02:23:04Z" duration-ms="2425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="TC003Admin_AddNewUser_POM_Script()[pri:0, instance:com.opensource.admin.qa.TC003Admin_AddNewUser_POM@27d5a580]" started-at="2021-07-10T01:42:24Z" name="TC003Admin_AddNewUser_POM_Script" finished-at="2021-07-10T01:42:38Z" duration-ms="13913" status="FAIL">
+        <test-method signature="TC004Admin_DeleteUser_POM_Script()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:05Z" name="TC004Admin_DeleteUser_POM_Script" finished-at="2021-07-10T02:23:19Z" duration-ms="14168" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='searchSystemUser_userName']"}
@@ -44,8 +44,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'VI1XXVQ01ELMXCO', ip: '10.55.233.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ace8213d515d7542699d703f711b458
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49621a53096213c9cb2e9a1c5ece810b
 *** Element info: {Using=xpath, value=//input[@id='searchSystemUser_userName']}]]>
             </message>
             <full-stacktrace>
@@ -55,8 +55,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'VI1XXVQ01ELMXCO', ip: '10.55.233.218', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52352}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ace8213d515d7542699d703f711b458
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\VI1XXVQ\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:57167}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 49621a53096213c9cb2e9a1c5ece810b
 *** Element info: {Using=xpath, value=//input[@id='searchSystemUser_userName']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -73,8 +73,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at com.opensource.base.SeleniumWrapper.type(SeleniumWrapper.java:123)
-at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:127)
-at com.opensource.admin.qa.TC003Admin_AddNewUser_POM.TC003Admin_AddNewUser_POM_Script(TC003Admin_AddNewUser_POM.java:65)
+at com.opensource.admin.UserManagementPage.searchUser(UserManagementPage.java:128)
+at com.opensource.admin.qa.TC004Admin_DeleteUser_POM.TC004Admin_DeleteUser_POM_Script(TC004Admin_DeleteUser_POM.java:58)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -126,15 +126,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[ Search username in field "Username"]]>
             </line>
           </reporter-output>
-        </test-method> <!-- TC003Admin_AddNewUser_POM_Script -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC003Admin_AddNewUser_POM@27d5a580]" started-at="2021-07-10T01:42:38Z" name="afterTest" finished-at="2021-07-10T01:42:38Z" duration-ms="243" status="PASS">
+        </test-method> <!-- TC004Admin_DeleteUser_POM_Script -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.opensource.admin.qa.TC004Admin_DeleteUser_POM@27d5a580]" started-at="2021-07-10T02:23:19Z" name="afterTest" finished-at="2021-07-10T02:23:19Z" duration-ms="253" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Closing Browser]]>
             </line>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.opensource.admin.qa.TC003Admin_AddNewUser_POM -->
+      </class> <!-- com.opensource.admin.qa.TC004Admin_DeleteUser_POM -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

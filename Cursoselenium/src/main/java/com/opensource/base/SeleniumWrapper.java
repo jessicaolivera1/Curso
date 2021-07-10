@@ -129,6 +129,7 @@ public class SeleniumWrapper {
 	 */
 
 	public void click (By locator) {
+		waitForElementClickable(locator);
 		driver.findElement(locator).click();
 	}
 	
@@ -153,6 +154,20 @@ public class SeleniumWrapper {
 
 		}
 
+	}
+	
+	/**
+	* Wait For Element Present
+	*  @author VI1XXVQ
+	 *
+	*/
+	public void waitForElementClickable(By locator) {
+	try {
+	WebDriverWait wait = new WebDriverWait(driver, 5);
+	wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}catch(TimeoutException e) {
+	e.printStackTrace();
+	}
 	}
 
 	/**
